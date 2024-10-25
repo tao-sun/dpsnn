@@ -1,0 +1,54 @@
+- VCTK
+    - p232_056
+        - fileid_p232_056_noisy_0.51.wav (noisy file, SI-SNR=0.51)
+        - fileid_p232_056_clean.wav. (clean file)
+        - fileid_p232_056_enhanced_1s_8.75.wav (enhanced file, training examples: 1 second, SI-SNR=8.75)
+        - fileid_p232_056_enhanced_4s_9.31.wav (enhanced file, training examples: 4 second, SI-SNR=9.31)
+    - p232_043
+        - fileid_p232_043_noisy_5.87.wav
+        - fileid_p232_043_clean.wav
+        - fileid_p232_043_enhanced_1s_16.30.wav
+        - fileid_p232_043_enhanced_4s_16.70.wav
+    - p232_263
+        - fileid_p232_263_noisy_1.56.wav
+        - fileid_p232_263_clean.wav
+        - fileid_p232_263_enhanced_1s_10.40.wav
+        - fileid_p232_263_enhanced_4s_11.17.wav
+    - p232_034
+        - fileid_p232_034_noisy_10.07.wav
+        - fileid_p232_034_clean.wav
+        - fileid_p232_034_enhanced_1s_16.38.wav
+        - fileid_p232_034_enhanced_4s_16.72.wav
+    - p257_426
+        - fileid_p257_426_noisy_1.18.wav
+        - fileid_p257_426_clean.wav
+        - fileid_p257_426_enhanced_1s_12.14.wav
+        - fileid_p257_426_enhanced_4s_13.35.wav
+
+- dns
+    - demo1
+        - fileid_0_noisy.wav (noisy file)
+        - fileid_0_clean.wav (clean file)
+        - fileid_0_enhanced.wav (enhanced file)
+        - eval_0.txt (metrics)
+    - demo2
+        - fileid_1970_noisy.wav
+        - fileid_1970_clean.wav
+        - fileid_1970_enhanced.wav
+        - eval_1970.txt 
+    - demo3
+        - fileid_11916_noisy.wav
+        - fileid_11916_clean.wav
+        - fileid_11916_enhanced.wav
+        - eval_11916.txt
+    - demo4
+        - fileid_3815_noisy.wav
+        - fileid_3815_clean.wav
+        - fileid_3815_enhanced.wav
+        - eval_3815.txt
+    - demo5
+        - fileid_4446_noisy.wav
+        - fileid_4446_clean.wav
+        - fileid_4446_enhanced.wav
+        - eval_4446.txt
+

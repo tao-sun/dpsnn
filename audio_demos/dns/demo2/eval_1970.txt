@@ -1,0 +1,3 @@
+               noisy       enhanced                  
+SI-SNR:        15.15         19.86
+DNSMOS OVRL:    2.82         2.96
