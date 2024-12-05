@@ -10,4 +10,4 @@ python -u vctk_trainer.py --config vctk.yaml -L 80 --stride 40 -N 256 -B 256 -H 
 ```
 
 ## Demos
-The audio demos for denoised files.
+Demos are in the <em>audio_demos</em> folder.
