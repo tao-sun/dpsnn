@@ -1,0 +1,64 @@
+name: &name "vctk_spike"
+
+data_folder: ./voicebank  # /export/scratch1/home/taosun/Projects/data/voicebank_4k
+# data_folder: C:/Users/gintama/Documents/dns/dns_srnn/egs/voicebank/export
+# test_clean_folder: !ref <data_folder>/TEST/clean
+
+output_folder: ${data_folder}/results
+save_folder: ${output_folder}/save
+# train_log: !ref <output_folder>/train_log.txt
+# enhanced_folder: ${output_folder}/enhanced
+
+# Basic parameters
+use_tensorboard: False
+# tensorboard_logs: !ref <output_folder>/logs/
+
+# Data files
+csv_train: ${save_folder}/train.csv
+csv_valid: ${save_folder}/valid.csv
+csv_test: ${save_folder}/test.csv
+
+hdf5_train: ${save_folder}/train.hdf5
+hdf5_test: ${save_folder}/test.hdf5
+hdf5_valid: ${save_folder}/valid.hdf5
+
+basic_loss: MSE # MSE, SM, RI, PCM, or SISDR
+number_of_epochs: 150
+batch_size: 1024 # TIMIT
+lr: 0.0001
+weight_decay: 0.001
+sample_rate: 16000
+frame_dur: 1.0
+context_dur: 0.01
+delay_dur: 0.00
+max_frames: 5
+num_workers: 1
+
+trainer:
+  max_epochs: 300
+#  max_steps: null # computed at runtime if not set
+  num_nodes: 1
+  strategy: ddp_find_unused_parameters_true  #ddp
+  accelerator: gpu # mps
+  # precision: 32
+  limit_train_batches: 1.0
+  devices: [1]
+
+checkpoint:
+  monitor: 'val_loss'
+  save_top_k: 3
+  save_last: True
+  filename: '{epoch}-{val_loss:.4f}-{val_sisnr:.4f}'
+
+EarlyStopping:
+  monitor: "val_loss"
+  min_delta: 0.00
+  patience: 10
+  verbose: False
+  mode: "min"
+
+optim:
+    name: adam
+    lr: 1e-2
+    T_max: 64
+    
