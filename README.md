@@ -1,4 +1,19 @@
-# dpsnn
+# DPSNN: Spiking Neural Network for Low-Latency Streaming Speech Enhancement
+
+If you use this code in an academic context, please cite our work:
+
+```bibtex
+@article{sun2024dpsnn,
+  title={DPSNN: spiking neural network for low-latency streaming speech enhancement},
+  author={Sun, Tao and Boht{\'e}, Sander},
+  journal={Neuromorphic Computing and Engineering},
+  volume={4},
+  number={4},
+  pages={044008},
+  year={2024},
+  publisher={IOP Publishing}
+}
+```
 
 ## Installation
 Follow the steps in installation.txt.
