@@ -2,12 +2,6 @@
 
 Inspired by the Dual-Path Recurrent Neural Network (DPRNN) in deep neural networks (DNNs), we develop a two-phase time-domain streaming SNN framework for speech enhancement, named Dual-Path Spiking Neural Network (DPSNN). DPSNNs achieve low latency by replacing the STFT and inverse STFT (iSTFT) in traditional frequency-domain models with a learned convolutional encoder and decoder.  In the DPSNN, the first phase uses Spiking Convolutional Neural Networks (SCNNs) to capture temporal contextual information, while the second phase uses Spiking Recurrent Neural Networks (SRNNs) to focus on frequency-related features. Evaluating on the Voice Cloning Toolkit (VCTK) Corpus and Intel N-DNS Challenge dataset, our approach demonstrates excellent performance in speech objective metrics, along with the very low latency (approximately 5 ms) required for applications like hearing aids.
 
-## Architecture
-The proposed DPSNN adopts the encoder-separator-decoder architecture. The encoder uses convolutions to convert waveform signals into 2D feature maps, effectively replacing the function of STFT. In the separator, a 2D mask is calculated, primarily relying on the SCNN and SRNN modules that capture the temporal and frequency contextual information of the encoded feature maps, respectively. In addition, threshold-based activation suppression, along with L1 regularization loss, is applied to specific non-spiking layers in DPSNNs to further improve their energy efficiency. After applying the calculated mask to the feature maps from the encoder, the decoder transforms the masked feature maps back to enhanced waveform signals.
-<!-- &nbsp; -->
-<img src="./figures/arch.jpeg" />
-<!-- &nbsp; -->
-
 If you use this code in an academic context, please cite our work:
 
 ```bibtex
@@ -22,6 +16,12 @@ If you use this code in an academic context, please cite our work:
   publisher={IOP Publishing}
 }
 ```
+
+## Architecture
+The proposed DPSNN adopts the encoder-separator-decoder architecture. The encoder uses convolutions to convert waveform signals into 2D feature maps, effectively replacing the function of STFT. In the separator, a 2D mask is calculated, primarily relying on the SCNN and SRNN modules that capture the temporal and frequency contextual information of the encoded feature maps, respectively. In addition, threshold-based activation suppression, along with L1 regularization loss, is applied to specific non-spiking layers in DPSNNs to further improve their energy efficiency. After applying the calculated mask to the feature maps from the encoder, the decoder transforms the masked feature maps back to enhanced waveform signals.
+<!-- &nbsp; -->
+<img src="./figures/arch.jpeg" />
+<!-- &nbsp; -->
 
 ## Installation
 Follow the steps in installation.txt.
